@@ -1,10 +1,14 @@
 import { defineConfig } from 'vitepress'
 
+/* 
+  需要将.vitepress目录下自带的catch缓存目录删除，否则github无法加载样式
+*/
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Zq UI",
   description: "高仿UI组件库",
-  base:"/Zq-UI/", //托管github，添加前缀，可以保证样式加载正常
+  base:"/Zq-UI/", //托管github会将仓库名Zq-UI添加作为前缀:/github/Zq-UI这种，添加加载确保可以正确访问路径加载资源
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
