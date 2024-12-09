@@ -8,7 +8,8 @@
     "docs:dev": "pnpm --filter @zq-ui/docs dev",
     "docs:build": "pnpm --filter @zq-ui/docs build",
     "docs:preview": "pnpm --filter @zq-ui/docs preview",
-    "test": "pnpm --filter @zq-ui/components test"
+    "test": "pnpm --filter @zq-ui/components test",
+    "story": "pnpm --filter @zq-ui/play storybook"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +28,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vitest": "^1.4.0",
-    "vue-tsc": "^1.8.27"
+    "vue-tsc": "^1.8.27",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8"
   },
   "dependencies": {
     "lodash-es": "^4.17.21",

@@ -1,9 +1,8 @@
 <template>
-    <zq-button/>
+    <zq-button type="primary" size="small" :loading="true" icon="search">按钮</zq-button>
 </template>
 
 <script setup lang="ts">
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style scoped></style>

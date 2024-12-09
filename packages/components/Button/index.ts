@@ -7,3 +7,5 @@ import Button from "./Button.vue";
 import { withInstall } from "@zq-ui/utils";
 
 export const ZqButton = withInstall(Button);
+
+export * from "./type";

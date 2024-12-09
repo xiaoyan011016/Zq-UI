@@ -3,4 +3,5 @@
     components为实际编写组件
 */
 
-export * from './Button'
+export * from "./Button";
+export * from "./Icon";
