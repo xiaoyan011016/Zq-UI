@@ -11,6 +11,9 @@ export const makeInstaller = (components:Plugin[])=>{
 
 
 export const withInstall = <T>(component:T)=>{
+    if (!component || !(component as any).name) {
+        throw new Error('Component or component name is undefined');
+      }
     (component as SFCWithInstall<T>).install = (app:App)=>{
         const name = (component as any).name
         app.component(name,component as Plugin)
