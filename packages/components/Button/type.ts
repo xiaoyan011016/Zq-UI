@@ -21,6 +21,12 @@ export interface ButtonProps {
   loadingIcon?: string;
 }
 
+export interface ButtonGroupProps {
+  size?:ButtonSize;
+  type?:ButtonType;
+  disabled?:boolean
+}
+
 //事件类型定义
 export interface ButtonEmits {
   (e: "click", val: MouseEvent): void;
