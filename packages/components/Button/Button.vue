@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <component :is="tag" ref="_ref" class="er-button" :type="tag === 'button' ? nativeType : void 0"
         :autofocus="autofocus" :disabled="disabled || loading ? true : void 0" :class="{
             [`er-button--${type}`]: type,
@@ -54,4 +55,16 @@ defineExpose<ButtonInstance>({
 
 <style scoped>
 @import './index.css';
+=======
+    <button>我是按钮</button>
+</template>
+
+<script setup lang="ts">
+defineOptions({
+    name: 'ZqButton'
+})
+</script>
+
+<style lang="scss" scoped>
+>>>>>>> parent of 0e80b39 (feat:vitest测试用例完成)
 </style>
