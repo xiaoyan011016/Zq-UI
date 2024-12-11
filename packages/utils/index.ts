@@ -1,1 +1,1 @@
-export * from '../install.ts'
+export * from './install.ts'
