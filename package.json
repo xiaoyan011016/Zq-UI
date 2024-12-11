@@ -8,8 +8,7 @@
     "docs:dev": "pnpm --filter @zq-ui/docs dev",
     "docs:build": "pnpm --filter @zq-ui/docs build",
     "docs:preview": "pnpm --filter @zq-ui/docs preview",
-    "test": "pnpm --filter @zq-ui/components test",
-    "story": "pnpm --filter @zq-ui/play storybook"
+    "test": "pnpm --filter @zq-ui/components test"
   },
   "keywords": [],
   "author": "",
