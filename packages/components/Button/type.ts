@@ -27,6 +27,13 @@ export interface ButtonGroupProps {
   disabled?:boolean
 }
 
+// 上下文类型定义 provide inject
+export interface ButtonGroupContext {
+  size?:ButtonSize;
+  type?:ButtonType;
+  disabled?:boolean 
+}
+
 //事件类型定义
 export interface ButtonEmits {
   (e: "click", val: MouseEvent): void;

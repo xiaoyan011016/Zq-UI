@@ -6,15 +6,25 @@
 </template>
 
 <script setup lang="ts">
+import {provide,toRef,reactive} from 'vue'
 import type {ButtonGroupProps} from './type.ts'
+import {BUTTON_GROUP_INJECTION_KEY} from './key.ts'
 
 defineOptions({
     name: 'ZqButtonGroup'
 })
 const props = defineProps<ButtonGroupProps>()
 
+provide(BUTTON_GROUP_INJECTION_KEY,
+    reactive({
+        size: toRef(props, "size"),
+        type: toRef(props, "type"),
+        disabled: toRef(props, "disabled"),
+    })
+)
 
 </script>
 
-<style  scoped>
+<style scoped>
+@import './index.css';
 </style>

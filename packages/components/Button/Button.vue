@@ -21,10 +21,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed ,inject} from 'vue';
 import type { ButtonProps, ButtonEmits, ButtonInstance } from './type';
 import { throttle } from 'lodash-es'
 import { ZqIcon } from 'zq-ui';
+import {BUTTON_GROUP_INJECTION_KEY} from './key.ts'
+
 defineOptions({
     name: 'ZqButton'
 })
@@ -40,6 +42,11 @@ const slots = defineSlots()
 
 const _ref = ref<HTMLButtonElement>()
 
+const buttonGroupCtx = inject(BUTTON_GROUP_INJECTION_KEY,void 0)
+const size = computed(() => buttonGroupCtx?.size ?? props.size ?? "");
+const type = computed(() => buttonGroupCtx?.type ?? props.type ?? "");
+const disabled = computed(() => props.disabled || buttonGroupCtx?.disabled || false);
+
 const handelBtnClick = (e: MouseEvent) => emits('click', e)
 const handleBtnClickThrottle = throttle(handelBtnClick, props.throttleDuration)
 
@@ -52,6 +59,6 @@ defineExpose<ButtonInstance>({
 })
 </script>
 
-<style scoped>
+<style >
 @import './index.css';
 </style>
